@@ -540,6 +540,10 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
+graphql-relay@^0.5.5:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/graphql-relay/-/graphql-relay-0.5.5.tgz#d6815e6edd618e878d5d921c13fc66033ec867e2"
+
 graphql-sequelize@^9.0.4:
   version "9.0.4"
   resolved "https://registry.yarnpkg.com/graphql-sequelize/-/graphql-sequelize-9.0.4.tgz#7ed5e03b15aaab126c6ce997652cd1e4a0ab024b"
