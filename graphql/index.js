@@ -9,6 +9,11 @@ const userType = new GraphQL.GraphQLObjectType({
     description: "A User",
     fields: attributeFields(Models.User)
   }),
+  commentType = new GraphQL.GraphQLObjectType({
+    name: "Comment",
+    description: "A Comment",
+    fields: attributeFields(Models.Comment)
+  })
   postType = new GraphQL.GraphQLObjectType({
     name: "Post",
     description: "A Post",
@@ -17,6 +22,10 @@ const userType = new GraphQL.GraphQLObjectType({
       user: {
         type: userType,
         resolve: resolver(Models.Post.User)
+      },
+      comments: {
+        type: GraphQL.GraphQLList(commentType),
+        resolve: resolver(Models.Post.Comments)
       }
     }
   })
@@ -33,6 +42,10 @@ module.exports = new GraphQL.GraphQLSchema({
       posts: {
         type: GraphQL.GraphQLList(postType),
         resolve: resolver(Models.Post)
+      },
+      comment: {
+        type: GraphQL.GraphQLList(commentType),
+        resolve: resolver(Models.Comment)
       },
     }
   })
